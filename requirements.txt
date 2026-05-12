@@ -1,0 +1,8 @@
+flask
+pandas
+numpy
+statsmodels
+scikit-learn
+scipy
+Flask-Limiter
+gunicorn

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vantiera Forecast Preview</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Forecast a Product in Seconds</h1>
+
+        <p class="subtitle">
+            Paste 12–36 months of historical demand to generate a quick forecast preview.
+        </p>
+
+        <textarea
+            id="historyInput"
+            placeholder="120, 132, 118, 141, 150..."
+        ></textarea>
+
+        <button id="forecastButton">
+            Generate Forecast
+        </button>
+
+        <div id="errorBox" class="hidden"></div>
+
+        <div id="resultsSection" class="hidden">
+
+            <h2>Forecast Preview</h2>
+
+            <div id="summaryNote"></div>
+
+            <div class="table-wrapper">
+            <table id="forecastTable">
+
+                <thead>
+                </thead>
+
+                <tbody>
+                </tbody>
+
+            </table>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="forecastChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
