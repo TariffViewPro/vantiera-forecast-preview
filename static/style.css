@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #F5F7FA;
     margin: 0;
-    padding: 40px;
+    padding: 24px;
     color: #1F2937;
 }
 
@@ -10,7 +10,7 @@ body {
     max-width: 800px;
     margin: auto;
     background: white;
-    padding: 32px;
+    padding: 24px;
     border-radius: 12px;
     border: 1px solid #E5E7EB;
 }
