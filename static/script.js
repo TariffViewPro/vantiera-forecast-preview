@@ -203,6 +203,7 @@ forecastButton.addEventListener("click", async () => {
         tableBody.appendChild(valueRow);
 
         resultsSection.classList.remove("hidden");
+        setTimeout(sendFrameHeight, 300);
 
         localStorage.setItem(
             "forecast_preview_runs",
@@ -213,6 +214,7 @@ forecastButton.addEventListener("click", async () => {
 
         errorBox.textContent = error.message;
         errorBox.classList.remove("hidden");
+        setTimeout(sendFrameHeight, 300);
 
     } finally {
 
@@ -221,3 +223,21 @@ forecastButton.addEventListener("click", async () => {
     }
 
 });
+
+function sendFrameHeight() {
+    const height = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+    );
+
+    window.parent.postMessage(
+        {
+            type: "vantieraPreviewHeight",
+            height: height
+        },
+        "*"
+    );
+}
+
+window.addEventListener("load", sendFrameHeight);
+window.addEventListener("resize", sendFrameHeight);
